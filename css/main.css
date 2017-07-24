@@ -1005,7 +1005,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #ddd;
+  color: $white;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1678,7 +1678,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #880d12;
+  background: #ffffb6;
 }
 .links-of-blogroll {
   font-size: 13px;
