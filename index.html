@@ -354,15 +354,26 @@
       
         
           
-            <p>这些年自己一直用WP系统来维护个人博客，它又能同步相应的文章到新浪博客和微博，已经能够完全满足我的日常需求。  </p>
+            <h3 id="碎碎前言"><a href="#碎碎前言" class="headerlink" title="碎碎前言"></a>碎碎前言</h3><p>这些年自己一直用WP系统来维护个人博客，它又能同步相应的文章到新浪博客和微博，已经能够完全满足我的日常需求。  </p>
 <p>所以我也没有想着要做什么改变；至于众说一词的“臃肿”，我倒是真有体会，做一次备份往往就要要几百兆，而其中的核心数据也就几十兆不到，其他大多是平台或支撑数据；但这真不妨碍我的日常写作，所以很自然地趁着主机商优惠，定了120个月的量，我是准备在WP上打持久战了。  </p>
-<p>事情的转折就在最近，我想搞一个融合<a href="http://tushare.org/" target="_blank" rel="external">Tushare</a>和<a href="http://echarts.baidu.com/" target="_blank" rel="external">Excharts</a>的<a href="http://ag.fyi" target="_blank" rel="external">ag.fyi</a>网站。后端的框架已经定了<a href="https://www.djangoproject.com/" target="_blank" rel="external">Django</a>，前端的框架还一直在学习了解中。这时候<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>就很自然地跃入了视野。它本身是做静态页面的，所以和<a href="http://ag.fyi" target="_blank" rel="external">ag.fyi</a>网站关系不大。但它确实蛮火的，前端圈子里的文章每每总有提及。看着各种例文，各种MD清新风，而且实现起来相当简单，弄得我实在心痒难耐。</p>
-<p>于是果断按照如下的诸片教程实操起来：<br><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a>  </p>
-<p><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">HEXO+Github,搭建属于自己的博客</a>  </p>
-<p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="external">GitHub+Hexo 搭建个人网站详细教程</a>     </p>
-<p><a href="https://zhuanlan.zhihu.com/p/27100035" target="_blank" rel="external">我的Hexo博客站的创建历程(一)【Github&amp;Coding双管齐下部署Hexo】</a>  </p>
-<p>一路参考下来，确实也遇不到什么“坑”，都是顺顺当当的搭建完毕。</p>
-
+<p>事情的转折就在最近，我想搞一个融合<a href="http://tushare.org/" target="_blank" rel="external">Tushare</a>和<a href="http://echarts.baidu.com/" target="_blank" rel="external">Excharts</a>的<a href="http://ag.fyi" target="_blank" rel="external">ag.fyi</a>网站。后端的框架已经定了<a href="https://www.djangoproject.com/" target="_blank" rel="external">Django</a>，前端的框架还一直在学习了解中。这时候<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>就很自然地跃入了视野。它本身是做静态页面的，所以和<a href="http://ag.fyi" target="_blank" rel="external">ag.fyi</a>网站关系不大。但它确实蛮火的，前端圈子里的文章每每总有提及。看着各种例文，各种MD清新风，而且实现起来又相当简单，弄得我实在心痒难耐。</p>
+<p>于是果断按照如下教程实操起来：  </p>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">20分钟教你使用hexo搭建github博客</a><br><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">HEXO+Github,搭建属于自己的博客</a><br><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="external">GitHub+Hexo 搭建个人网站详细教程</a><br><a href="https://zhuanlan.zhihu.com/p/27100035" target="_blank" rel="external">我的Hexo博客站的创建历程(一)【Github&amp;Coding双管齐下部署Hexo】</a>  </p>
+</blockquote>
+<p>一路参考下来，确实也没遇到什么“坑”，基本顺顺当当地搭建完毕。不然也就看不到这个博客了，不过还是有两个地方可以拿出来分享。</p>
+<h3 id="小议DNS"><a href="#小议DNS" class="headerlink" title="小议DNS"></a>小议DNS</h3><p>在域名绑定的问题上，我有些跳跃，没有一步一步地按照上述教程里的步骤做。而是按照自己的理解，直接用“ping kennliu.github.io”获得的IP地址去绑<a href="http://kennliu.net">kennliu.net</a>的A记录，一开始没什么差别，也能直接访问。但是重新“hexo d”一遍以后，我发觉用自己的域名无法访问页面了。再“ping kennliu.github.io”后，原来是解析出来的IP地址变了。  </p>
+<p>于是我只好在重头看教程，这才发觉github是明确给出了A记录所用到的IP地址。</p>
+<blockquote>
+<p>Follow your DNS provider’s instructions to create two A records that point your custom domain to the following IP addresses:<br>192.30.252.153<br>192.30.252.154</p>
+</blockquote>
+<p>说这个例子到不是想分享DNS设置本身，而是对于适用一个教程的方法。按部就班固然能很快见到实效，不过在自己原先理解的基础上，做一些适当的试错，也算是磨刀不误砍柴功。有时候主动遇“坑”，反而能事半功备。  </p>
+<p>所以在后续<a href="http://pages.coding.net" target="_blank" rel="external">coding pages</a>的域名设置上，我就很仔细地去读了<a href="https://coding.net/help/doc/pages/getting-started.html" target="_blank" rel="external">官方文档</a>：</p>
+<blockquote>
+<p>首先，在您的域名管理面板中添加 CNAME 记录指向到 pages.coding.me。然后，在「Pages 服务」设置页中的自定义域名栏目输入您欲绑定的域名，点击「保存」即可通过自定义域名访问您的网站。</p>
+</blockquote>
+<p>因而也就遇到什么问题了。</p>
+<h3 id="NexT模板地微调"><a href="#NexT模板地微调" class="headerlink" title="NexT模板地微调"></a>NexT模板地微调</h3>
           
         
       
